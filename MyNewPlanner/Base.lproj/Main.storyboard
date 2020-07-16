@@ -174,11 +174,25 @@
         <!--Calendar-->
         <scene sceneID="0in-1b-0Qt">
             <objects>
-                <viewController id="aww-L6-ivp" sceneMemberID="viewController">
+                <viewController id="aww-L6-ivp" customClass="CalendarViewController" customModule="MyNewPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KfB-eg-1J6" customClass="Calendar">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5y5-7v-RQx" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="88" width="414" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="YDn-pR-6iE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5y5-7v-RQx" firstAttribute="trailing" secondItem="bg0-N6-3d4" secondAttribute="trailing" id="FI9-Re-1WG"/>
+                            <constraint firstItem="5y5-7v-RQx" firstAttribute="top" secondItem="bg0-N6-3d4" secondAttribute="top" id="FnB-mx-bLu"/>
+                            <constraint firstItem="5y5-7v-RQx" firstAttribute="leading" secondItem="bg0-N6-3d4" secondAttribute="leading" id="MhD-7a-WZ6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bg0-N6-3d4"/>
                     </view>
                     <navigationItem key="navigationItem" title="Calendar" id="pxe-41-6jj">

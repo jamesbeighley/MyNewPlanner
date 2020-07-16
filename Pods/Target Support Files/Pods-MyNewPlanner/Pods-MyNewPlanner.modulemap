@@ -1,0 +1,6 @@
+framework module Pods_MyNewPlanner {
+  umbrella header "Pods-MyNewPlanner-umbrella.h"
+
+  export *
+  module * { export * }
+}

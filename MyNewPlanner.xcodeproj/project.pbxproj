@@ -16,6 +16,7 @@
 		101AA1FE24BF8767001E6593 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101AA1FD24BF8767001E6593 /* SignInViewController.swift */; };
 		101AA20024BF8782001E6593 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101AA1FF24BF8782001E6593 /* SignUpViewController.swift */; };
 		101AA20224BF957B001E6593 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101AA20124BF957B001E6593 /* CalendarViewController.swift */; };
+		6E086365650FC7E82C9F923B /* Pods_MyNewPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3AD13C4816C2E812A2E0D6 /* Pods_MyNewPlanner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,9 @@
 		101AA1FD24BF8767001E6593 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		101AA1FF24BF8782001E6593 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		101AA20124BF957B001E6593 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		BA3AD13C4816C2E812A2E0D6 /* Pods_MyNewPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNewPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8C4DFBEECB69FD4B84F88ED /* Pods-MyNewPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNewPlanner.debug.xcconfig"; path = "Target Support Files/Pods-MyNewPlanner/Pods-MyNewPlanner.debug.xcconfig"; sourceTree = "<group>"; };
+		E0533D83199A95DFD76F9FE3 /* Pods-MyNewPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNewPlanner.release.xcconfig"; path = "Target Support Files/Pods-MyNewPlanner/Pods-MyNewPlanner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E086365650FC7E82C9F923B /* Pods_MyNewPlanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,8 @@
 			children = (
 				101AA1E124BF8179001E6593 /* MyNewPlanner */,
 				101AA1E024BF8179001E6593 /* Products */,
+				E77B3D55128A5011398FC699 /* Pods */,
+				9E3B8027135B8C759F3EBEC6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +83,24 @@
 			path = MyNewPlanner;
 			sourceTree = "<group>";
 		};
+		9E3B8027135B8C759F3EBEC6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA3AD13C4816C2E812A2E0D6 /* Pods_MyNewPlanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E77B3D55128A5011398FC699 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8C4DFBEECB69FD4B84F88ED /* Pods-MyNewPlanner.debug.xcconfig */,
+				E0533D83199A95DFD76F9FE3 /* Pods-MyNewPlanner.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 101AA1F324BF8180001E6593 /* Build configuration list for PBXNativeTarget "MyNewPlanner" */;
 			buildPhases = (
+				E33461C2168E29BBCCC23E2B /* [CP] Check Pods Manifest.lock */,
 				101AA1DB24BF8179001E6593 /* Sources */,
 				101AA1DC24BF8179001E6593 /* Frameworks */,
 				101AA1DD24BF8179001E6593 /* Resources */,
+				5B44657D04F8DE95E63DBFB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +168,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B44657D04F8DE95E63DBFB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyNewPlanner/Pods-MyNewPlanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyNewPlanner/Pods-MyNewPlanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyNewPlanner/Pods-MyNewPlanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E33461C2168E29BBCCC23E2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyNewPlanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		101AA1DB24BF8179001E6593 /* Sources */ = {
@@ -294,6 +363,7 @@
 		};
 		101AA1F424BF8180001E6593 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8C4DFBEECB69FD4B84F88ED /* Pods-MyNewPlanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +382,7 @@
 		};
 		101AA1F524BF8180001E6593 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0533D83199A95DFD76F9FE3 /* Pods-MyNewPlanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
