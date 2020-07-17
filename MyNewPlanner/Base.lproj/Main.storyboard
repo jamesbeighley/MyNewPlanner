@@ -113,6 +113,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="9lF-wO-SI4" eventType="touchUpInside" id="6IO-Gv-8I2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -122,6 +125,8 @@
                         <barButtonItem key="backBarButtonItem" title="True" id="wiU-IE-TrZ"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="password" destination="win-DS-wfH" id="chj-gi-BZO"/>
+                        <outlet property="username" destination="VOU-vj-Zih" id="UUj-N9-SaT"/>
                         <segue destination="aww-L6-ivp" kind="show" identifier="SignUpToCalendar" id="4Fm-m9-0Sb"/>
                     </connections>
                 </viewController>
@@ -151,6 +156,9 @@
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="RtO-Vx-1rZ" eventType="touchUpInside" id="So4-f4-FE2"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ftd-Dr-xO3">
                                 <rect key="frame" x="162" y="146" width="90.5" height="34"/>
@@ -164,6 +172,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sign In" id="G4V-gN-yFc"/>
                     <connections>
+                        <outlet property="emailTextField" destination="Ftd-Dr-xO3" id="zGi-lK-cq1"/>
+                        <outlet property="passwordTextField" destination="RS5-3T-gsx" id="gGD-L7-kD6"/>
                         <segue destination="aww-L6-ivp" kind="show" identifier="SignInToCalendar" id="JuP-Wd-Nbg"/>
                     </connections>
                 </viewController>

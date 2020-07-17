@@ -7,4 +7,6 @@ target 'MyNewPlanner' do
 
   # Pods for MyNewPlanner
 pod 'FSCalendar'
+pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
 end

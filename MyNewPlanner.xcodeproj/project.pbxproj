@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		101AA1FE24BF8767001E6593 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101AA1FD24BF8767001E6593 /* SignInViewController.swift */; };
 		101AA20024BF8782001E6593 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101AA1FF24BF8782001E6593 /* SignUpViewController.swift */; };
 		101AA20224BF957B001E6593 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101AA20124BF957B001E6593 /* CalendarViewController.swift */; };
+		1039906424C0E052006BA76B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1039906324C0E052006BA76B /* GoogleService-Info.plist */; };
 		6E086365650FC7E82C9F923B /* Pods_MyNewPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3AD13C4816C2E812A2E0D6 /* Pods_MyNewPlanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		101AA1FD24BF8767001E6593 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		101AA1FF24BF8782001E6593 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		101AA20124BF957B001E6593 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		1039906324C0E052006BA76B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA3AD13C4816C2E812A2E0D6 /* Pods_MyNewPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNewPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C4DFBEECB69FD4B84F88ED /* Pods-MyNewPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNewPlanner.debug.xcconfig"; path = "Target Support Files/Pods-MyNewPlanner/Pods-MyNewPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		E0533D83199A95DFD76F9FE3 /* Pods-MyNewPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNewPlanner.release.xcconfig"; path = "Target Support Files/Pods-MyNewPlanner/Pods-MyNewPlanner.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				101AA1FB24BF8710001E6593 /* WelcomeViewController.swift */,
 				101AA1ED24BF8180001E6593 /* LaunchScreen.storyboard */,
 				101AA1F024BF8180001E6593 /* Info.plist */,
+				1039906324C0E052006BA76B /* GoogleService-Info.plist */,
 			);
 			path = MyNewPlanner;
 			sourceTree = "<group>";
@@ -97,7 +100,6 @@
 				D8C4DFBEECB69FD4B84F88ED /* Pods-MyNewPlanner.debug.xcconfig */,
 				E0533D83199A95DFD76F9FE3 /* Pods-MyNewPlanner.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -162,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				101AA1EF24BF8180001E6593 /* LaunchScreen.storyboard in Resources */,
+				1039906424C0E052006BA76B /* GoogleService-Info.plist in Resources */,
 				101AA1EC24BF8180001E6593 /* Assets.xcassets in Resources */,
 				101AA1EA24BF8179001E6593 /* Main.storyboard in Resources */,
 			);
