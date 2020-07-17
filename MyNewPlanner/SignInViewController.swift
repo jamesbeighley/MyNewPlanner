@@ -25,7 +25,7 @@ class SignInViewController: UIViewController {
                     print(e)
                 }
                 else{
-                    self.performSegue(withIdentifier: "SignInToPlanner", sender: self)
+                    self.performSegue(withIdentifier: "SignInToCalendar", sender: self)
                 }
             }
         }
