@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
-class ViewController: UIViewController {
-
+class DayEventsViewController: UIViewController {
+    var date = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = date
         // Do any additional setup after loading the view.
     }
+    
     
     /*
     // MARK: - Navigation
