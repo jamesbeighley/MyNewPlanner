@@ -18,6 +18,8 @@
 		101AA20224BF957B001E6593 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101AA20124BF957B001E6593 /* CalendarViewController.swift */; };
 		1039906424C0E052006BA76B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1039906324C0E052006BA76B /* GoogleService-Info.plist */; };
 		1039906624C24F71006BA76B /* DayEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1039906524C24F71006BA76B /* DayEventsViewController.swift */; };
+		108AAAA024C37B000020E34A /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108AAA9F24C37B000020E34A /* CreateEventViewController.swift */; };
+		108AAAA224C60C830020E34A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108AAAA124C60C830020E34A /* Event.swift */; };
 		6E086365650FC7E82C9F923B /* Pods_MyNewPlanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3AD13C4816C2E812A2E0D6 /* Pods_MyNewPlanner.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		101AA20124BF957B001E6593 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		1039906324C0E052006BA76B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1039906524C24F71006BA76B /* DayEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEventsViewController.swift; sourceTree = "<group>"; };
+		108AAA9F24C37B000020E34A /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		108AAAA124C60C830020E34A /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BA3AD13C4816C2E812A2E0D6 /* Pods_MyNewPlanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNewPlanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C4DFBEECB69FD4B84F88ED /* Pods-MyNewPlanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNewPlanner.debug.xcconfig"; path = "Target Support Files/Pods-MyNewPlanner/Pods-MyNewPlanner.debug.xcconfig"; sourceTree = "<group>"; };
 		E0533D83199A95DFD76F9FE3 /* Pods-MyNewPlanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNewPlanner.release.xcconfig"; path = "Target Support Files/Pods-MyNewPlanner/Pods-MyNewPlanner.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,9 +81,11 @@
 				101AA1E424BF8179001E6593 /* SceneDelegate.swift */,
 				101AA1EB24BF8180001E6593 /* Assets.xcassets */,
 				101AA1E824BF8179001E6593 /* Main.storyboard */,
+				108AAA9F24C37B000020E34A /* CreateEventViewController.swift */,
 				1039906524C24F71006BA76B /* DayEventsViewController.swift */,
 				101AA20124BF957B001E6593 /* CalendarViewController.swift */,
 				101AA1FF24BF8782001E6593 /* SignUpViewController.swift */,
+				108AAAA124C60C830020E34A /* Event.swift */,
 				101AA1FD24BF8767001E6593 /* SignInViewController.swift */,
 				101AA1FB24BF8710001E6593 /* WelcomeViewController.swift */,
 				101AA1ED24BF8180001E6593 /* LaunchScreen.storyboard */,
@@ -223,12 +229,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				101AA20224BF957B001E6593 /* CalendarViewController.swift in Sources */,
+				108AAAA224C60C830020E34A /* Event.swift in Sources */,
 				101AA1FE24BF8767001E6593 /* SignInViewController.swift in Sources */,
 				101AA1FC24BF8710001E6593 /* WelcomeViewController.swift in Sources */,
 				101AA1E324BF8179001E6593 /* AppDelegate.swift in Sources */,
 				1039906624C24F71006BA76B /* DayEventsViewController.swift in Sources */,
 				101AA1E524BF8179001E6593 /* SceneDelegate.swift in Sources */,
 				101AA20024BF8782001E6593 /* SignUpViewController.swift in Sources */,
+				108AAAA024C37B000020E34A /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
