@@ -57,6 +57,8 @@ class CreateEventViewController: UIViewController {
         }
     }
     
+    //check if hours given is a valid number 1-12
+    
     func checkHours(hour: String) -> Bool{
         if let myhour = Int(hour){
             if(myhour >= 1 && myhour <= 12){
@@ -68,6 +70,10 @@ class CreateEventViewController: UIViewController {
         }
         return false
     }
+    
+    
+    //check if minutes given is a valid number 0-59
+    
     func checkMinutes(minute:String) -> Bool{
         if let myMinute = Int(minute){
             if(myMinute >= 0 && myMinute < 60){
@@ -78,9 +84,10 @@ class CreateEventViewController: UIViewController {
             }
         }
         return false
-        
     }
     
+    
+    //consolidate the hours, minutes and period given into a single Int representing minutes after midnight
     func getTime(hour: String, minute: String, period: String) -> Int{
         let minutes = Int(minute);
         var hours = Int(hour);
