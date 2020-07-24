@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		100E309824C74A4700D477C2 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100E309624C74A4700D477C2 /* EventCell.swift */; };
 		100E309924C74A4700D477C2 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 100E309724C74A4700D477C2 /* EventCell.xib */; };
+		100E309B24C9046800D477C2 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100E309A24C9046800D477C2 /* EventViewController.swift */; };
 		101AA1E324BF8179001E6593 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101AA1E224BF8179001E6593 /* AppDelegate.swift */; };
 		101AA1E524BF8179001E6593 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101AA1E424BF8179001E6593 /* SceneDelegate.swift */; };
 		101AA1EA24BF8179001E6593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101AA1E824BF8179001E6593 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		100E309624C74A4700D477C2 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		100E309724C74A4700D477C2 /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		100E309A24C9046800D477C2 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		101AA1DF24BF8179001E6593 /* MyNewPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNewPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101AA1E224BF8179001E6593 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		101AA1E424BF8179001E6593 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				101AA1E424BF8179001E6593 /* SceneDelegate.swift */,
 				101AA1EB24BF8180001E6593 /* Assets.xcassets */,
 				101AA1E824BF8179001E6593 /* Main.storyboard */,
+				100E309A24C9046800D477C2 /* EventViewController.swift */,
 				108AAA9F24C37B000020E34A /* CreateEventViewController.swift */,
 				100E309624C74A4700D477C2 /* EventCell.swift */,
 				100E309724C74A4700D477C2 /* EventCell.xib */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				101AA20224BF957B001E6593 /* CalendarViewController.swift in Sources */,
+				100E309B24C9046800D477C2 /* EventViewController.swift in Sources */,
 				108AAAA224C60C830020E34A /* Event.swift in Sources */,
 				100E309824C74A4700D477C2 /* EventCell.swift in Sources */,
 				101AA1FE24BF8767001E6593 /* SignInViewController.swift in Sources */,

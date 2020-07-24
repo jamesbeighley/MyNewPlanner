@@ -41,8 +41,8 @@ class CreateEventViewController: UIViewController {
         }
         else{
             if let description = descriptionLabel.text, let periodtext = period.text, let minutes = Minute.text, let hours = Hour.text{
-                db.collection((Auth.auth().currentUser?.email)!).document(title!).collection("Events").addDocument(data: ["Time": getTime(hour: hours, minute: minutes, period: periodtext),
-                                                           "Description": description])
+                db.collection((Auth.auth().currentUser?.email)!).document(title!).collection("Events").document(description).setData(["Time": getTime(hour: hours, minute: minutes, period: periodtext),
+                "Description": description])
                 { (error) in
                     if let e = error {
                     print(e)

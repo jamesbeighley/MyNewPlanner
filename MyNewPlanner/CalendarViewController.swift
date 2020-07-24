@@ -8,6 +8,7 @@
 
 import UIKit
 import FSCalendar
+import Firebase
 
 class CalendarViewController: UIViewController, FSCalendarDelegate {
     @IBOutlet weak var calendar: FSCalendar!
@@ -15,6 +16,7 @@ class CalendarViewController: UIViewController, FSCalendarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         calendar.delegate = self
+        navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
     }
     
@@ -27,10 +29,20 @@ class CalendarViewController: UIViewController, FSCalendarDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var vc = segue.destination as! DayEventsViewController
+        print(vc)
         vc.date = name
     }
     
-
+    @IBAction func signOutPressed(_ sender: UIBarButtonItem) {
+        do{
+            try Auth.auth().signOut()
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        catch let signouterror as NSError{
+            print("error signing out: %@", signouterror)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
