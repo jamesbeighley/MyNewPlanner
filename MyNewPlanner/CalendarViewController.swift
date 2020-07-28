@@ -9,6 +9,7 @@
 import UIKit
 import FSCalendar
 import Firebase
+import UserNotifications
 
 class CalendarViewController: UIViewController, FSCalendarDelegate {
     @IBOutlet weak var calendar: FSCalendar!
@@ -17,12 +18,25 @@ class CalendarViewController: UIViewController, FSCalendarDelegate {
         super.viewDidLoad()
         calendar.delegate = self
         navigationItem.hidesBackButton = true
+        registerLocal()
         // Do any additional setup after loading the view.
+    }
+    
+    func registerLocal(){
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge, .sound]){granted,Error in
+            if(granted){
+                print("yes")
+            }
+            else{
+                print("no")
+            }
+        }
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         let formatter = DateFormatter()
-        formatter.dateFormat = "EEEE MM-dd-YYYY"
+        formatter.dateFormat = "MM-dd-YYYY"
         name = formatter.string(from: date)
         performSegue(withIdentifier: "CalendarToDayEvents", sender: self)
     }

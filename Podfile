@@ -9,4 +9,5 @@ target 'MyNewPlanner' do
 pod 'FSCalendar'
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'IQKeyboardManager'
 end

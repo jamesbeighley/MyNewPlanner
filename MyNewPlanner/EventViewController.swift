@@ -32,7 +32,7 @@ class EventViewController: UIViewController {
                 print("Document successfully removed!")
             }
         }
-        _ = navigationController?.popViewController(animated: true)
+        performSegue(withIdentifier: "eventToCalendar", sender: self)
     }
     
     func getTime(time: Int)-> String{

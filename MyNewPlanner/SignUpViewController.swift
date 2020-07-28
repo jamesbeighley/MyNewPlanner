@@ -9,27 +9,42 @@
 import UIKit
 import Firebase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var reEnterPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.username.delegate = self
+        self.password.delegate = self
+
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        if let email = username.text, let password = password.text {
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                if let e = error{
-                    print(e)
-                }
-                else{
-                    self.performSegue(withIdentifier: "SignUpToCalendar", sender: self)
+        if(password.text != reEnterPassword.text){
+            self.errorLabel.text = "password fields do not match"
+        }
+        else{
+            if let email = username.text, let password = password.text {
+                Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                    if let e = error{
+                        self.errorLabel.text = e.localizedDescription
+                    }
+                    else{
+                        self.performSegue(withIdentifier: "SignUpToCalendar", sender: self)
+                    }
                 }
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     /*

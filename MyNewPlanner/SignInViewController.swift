@@ -9,26 +9,32 @@
 import UIKit
 import Firebase
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
         // Do any additional setup after loading the view.
     }
     @IBAction func buttonPressed(_ sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let e = error{
-                    print(e)
+                    self.errorLabel.text = e.localizedDescription
                 }
                 else{
                     self.performSegue(withIdentifier: "SignInToCalendar", sender: self)
                 }
             }
         }
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
 

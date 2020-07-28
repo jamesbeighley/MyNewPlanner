@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import UserNotifications
+
 class CreateEventViewController: UIViewController {
     var date = ""
     let db = Firestore.firestore()
@@ -39,6 +41,9 @@ class CreateEventViewController: UIViewController {
         else if(checkMinutes(minute: Minute.text!) == false){
             ErrorLabel.text = "Error: make sure Minutes is 0-59"
         }
+        else if(checkDescription(description:descriptionLabel.text!) == false){
+            ErrorLabel.text = "Error: Description Field is empty"
+        }
         else{
             if let description = descriptionLabel.text, let periodtext = period.text, let minutes = Minute.text, let hours = Hour.text{
                 db.collection((Auth.auth().currentUser?.email)!).document(title!).collection("Events").document(description).setData(["Time": getTime(hour: hours, minute: minutes, period: periodtext),
@@ -52,12 +57,33 @@ class CreateEventViewController: UIViewController {
                     }
                 }
             }
-            _ = navigationController?.popViewController(animated: true)
+            scheduleNotification()
+            performSegue(withIdentifier: "createEventToCalendar", sender: self)
         
         }
     }
     
     //check if hours given is a valid number 1-12
+    
+    func scheduleNotification(){
+        let center = UNUserNotificationCenter.current()
+        let array = title?.split(separator: "-")
+        let content = UNMutableNotificationContent()
+        content.title = "From Your Schedule"
+        content.body = descriptionLabel.text!
+        content.categoryIdentifier = "alarm"
+        content.userInfo = [:]
+        content.sound = UNNotificationSound.default
+        var datecomponents = DateComponents()
+        datecomponents.year = Int(array![2])
+        datecomponents.month = Int(array![0])
+        datecomponents.day = Int(array![1])
+        datecomponents.hour = getTime(hour: Hour.text!, minute: Minute.text!, period: period.text!) / 60
+        datecomponents.minute = Int(Minute.text!)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: datecomponents, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        center.add(request)
+    }
     
     func checkHours(hour: String) -> Bool{
         if let myhour = Int(hour){
@@ -69,6 +95,15 @@ class CreateEventViewController: UIViewController {
             }
         }
         return false
+    }
+    
+    func checkDescription(description:String)->Bool{
+        if(description != ""){
+            return true
+        }
+        else{
+            return false
+        }
     }
     
     
